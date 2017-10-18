@@ -4,7 +4,7 @@ category: API CIELO ECOMMERCE
 order: 1
 ---
 
-## O que é?
+### O que é?
 
 O Boleto Registrado é um dos meios de pagamentos disponibilizados no E-commerce. Com o objetivo de mitigar fraudes, a Febraban em conjunto com os Bancos desenvolveu a modalidade registrada, tendo um controle centralizado de todos os boletos emitidos.  
 
@@ -18,3 +18,5 @@ Esta modalidade de cobrança permite que o comprador efetue o pagamento do bolet
 
 Atender à obrigatoriedade da Febraban de adequação dos boletos para modalidade registrada a partir do dia 10/07/2017, conforme tabela abaixo:
 
+
+IMAGEM 1
