@@ -32,13 +32,12 @@ O mesmo código é usado para todos os bancos, e podem ser visualizado em:
 
 
 
-# Boleto Bradesco
+### Boleto Bradesco
 
 ![](http://sizzling-oryx.cloudvent.net/images/Boletos/Bradesco.jpg)
 
 
-
-### Como funciona?
+### Como funciona - Fluxo Transacional Bradesco?
 
 1. O comprador, após escolher o produto na loja virtual, seleciona a forma de pagamento Boleto Bradesco;
 1. A loja virtual envia para a Cielo uma requisição chamando o meio de pagamento correspondente;
@@ -54,10 +53,21 @@ IMAGEM 2
 
 
 
+### Lojista - Ativando o Boleto no Bradesco
 
-### Como faço para habilitar a funcionalidade?
+1. O lojista deverá contatar o gerente de relacionamento do Banco Bradesco para solicitar a contratação do Boleto Registrado via Gerenciador API;
+1. A equipe técnica do Banco enviará para o e-mail do solicitante os dados de acesso ao Gerenciador API.
+1. No painel do Bradesco, o lojista deverá acesse a aba “Configurações” e escolher a opção “Meios de Pagamento”.
+1. O campo “Palavra-secreta” deve ser preenchido com uma senha. A operação é confirmada clicando em “Gerar nova chave de segurança”:
+1. Ainda no [Painel do Bradesco](https://meiosdepagamentobradesco.com.br/gerenciadorapi/login.jsp), o cliente deve criar um Usuário de Consulta para atualizações de status.
+2. O Lojista deverá realizar atualização dos dados cadastrais Bradesco para poder Transacionar. Ver [Tutorial](https://developercielo.github.io/Habilitacao-meios-de-pagamento/#bradesco).
+ 
 
-O lojista deverá contatar o gerente de relacionamento do Banco Bradesco para solicitar a contratação do Boleto Registrado via Gerenciador API;
-A equipe técnica do Banco enviará para o e-mail do solicitante os dados de acesso ao Gerenciador API.
-No painel do Bradesco, o lojista deverá acesse a aba “Configurações” e escolher a opção “Meios de Pagamento”.
-O campo “Palavra-secreta” deve ser preenchido com uma senha. A operação é confirmada clicando em “Gerar nova chave de segurança”:
+### HD Cielo - Ativando o Boleto no Bradesco
+
+
+
+
+
+
+
