@@ -14,7 +14,7 @@ A Cobrança Registrada foi desenvolvida para promover maior confiabilidade e seg
 
 Esta modalidade de cobrança permite que o comprador efetue o pagamento do boleto em qualquer agência bancária mesmo depois do vencimento.
 
-### O Qual problema estamos solucionando?
+### Qual problema estamos solucionando?
 
 Atender à obrigatoriedade da Febraban de adequação dos boletos para modalidade registrada a partir do dia 10/07/2017, conforme tabela abaixo:
 
@@ -84,10 +84,15 @@ Com esses dados, acesse siga os passos abaixo:
 
 1. Acesse o  Admin Braspag e selecione a opção “**Pesquisar Estabelecimento**”, existente dentro da aba “Admin” do menu superior:
 
+![](http://sizzling-oryx.cloudvent.net/images/Boletos/AB1.PNG)
+
 2. Utilize os filtros para localizar a loja:
+
+![](http://sizzling-oryx.cloudvent.net/images/Boletos/AB2.PNG)
 
 3. Dentro do cadastro da loja, vá até a sessão “**Meios de pagamento**” e clique no botão “**Editar**” ao lado do Boleto: 
 
+![](http://sizzling-oryx.cloudvent.net/images/Boletos/AB3.PNG)
 
 
 
