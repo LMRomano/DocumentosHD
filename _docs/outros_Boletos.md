@@ -31,8 +31,7 @@ O mesmo código é usado para todos os bancos, e podem ser visualizado em:
 > https://developercielo.github.io/Webservice-3.0/#criando-uma-venda-de-boleto
 
 
-
-### Boleto Bradesco
+## Boleto Bradesco
 
 ![](http://sizzling-oryx.cloudvent.net/images/Boletos/Bradesco.jpg)
 
@@ -47,6 +46,8 @@ O mesmo código é usado para todos os bancos, e podem ser visualizado em:
 1. O cliente acessa a URL do boleto (renderização) e então pode realizar o pagamento; 
 1. A conciliação do documento é feita via serviço de consulta da Cielo ao sistema do Bradesco. 
 1. Para receber as notificações de pagamento, a loja deve ter cadastrada a URL de Notificação e eventualmente utilizar nosso serviço de consulta. 
+
+
 
 IMAGEM 2
 
@@ -64,6 +65,7 @@ IMAGEM 2
  
 
 ### HD Cielo - Ativando o Boleto no Bradesco
+
 
 
 
