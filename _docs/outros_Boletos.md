@@ -21,14 +21,18 @@ Atender à obrigatoriedade da Febraban de adequação dos boletos para modalidad
 
 IMAGEM 1
 
-
-
 ### Como a Integração ocorre na 3.0?
 
 A 3.0 possui apenas um tipo de chamado, tanto para boletos do "Registrado" quanto "Não Registrados".
 O mesmo código é usado para todos os bancos, e podem ser visualizado em: 
 
 > https://developercielo.github.io/Webservice-3.0/#criando-uma-venda-de-boleto
+
+
+
+
+-------------------------------------------------------------------
+
 
 
 ## Boleto Bradesco
