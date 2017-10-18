@@ -8,7 +8,7 @@ order: 1
 
 O Boleto Registrado é um dos meios de pagamentos disponibilizados no E-commerce. Com o objetivo de mitigar fraudes, a Febraban em conjunto com os Bancos desenvolveu a modalidade registrada, tendo um controle centralizado de todos os boletos emitidos.  
 
-### O Qual o benefício em utilizá-lo?
+### Qual o benefício em utilizá-lo?
 
 A Cobrança Registrada foi desenvolvida para promover maior confiabilidade e segurança na compra online. O banco emissor tem conhecimento do boleto desde sua geração até sua liquidação. O lojista tem a opção de negativar o comprador que gerou e não pagou uma cobrança registrada.
 
@@ -22,21 +22,39 @@ Atender à obrigatoriedade da Febraban de adequação dos boletos para modalidad
 IMAGEM 1
 
 
+
+### Como a Integração ocorre na 3.0?
+
+A 3.0 possui apenas um tipo de chamado, tanto para boletos do "Registrado" quanto "Não Registrados".
+O mesmo código é usado para todos os bancos, e podem ser visualizado em: 
+
+> https://developercielo.github.io/Webservice-3.0/#criando-uma-venda-de-boleto
+
+
+
 ## Boleto Bradesco
-
-
-### Público Alvo
-
-Qualquer cliente que queira fornecer a solução de pagamento Boleto Registrado via Banco Bradesco.
 
 
 ### Como funciona?
 
 1. O comprador, após escolher o produto na loja virtual, seleciona a forma de pagamento Boleto Bradesco;
-1.A loja virtual envia para a Braspag uma requisição chamando o meio de pagamento correspondente;
-1.A Braspag se comunica com a aplicação do Banco Bradesco solicitando o registro do boleto;
-1.Caso o registro seja realizado com sucesso, o Banco responde à solicitação devolvendo os dados de cobrança (código de barras, linha digitável, etc) e a URL do Boleto;
-1.A Braspag envia no response este link para que a loja possa encaminhar ao comprador;
+1.A loja virtual envia para a Cielo uma requisição chamando o meio de pagamento correspondente;
+1.A Cielo se comunica com a aplicação do Banco Bradesco solicitando o registro do boleto;
+1.Caso o registro seja realizado com sucesso, o Banco responde à solicitação devolvendo os dados de cobrança (código de barras, linha digitável, etc) e a **URL do Boleto**;
+1.A Cielo envia no response o link para que a loja possa encaminhar ao comprador am ambiente Bancário;
 1.O cliente acessa a URL do boleto (renderização) e então pode realizar o pagamento; 
-1.A conciliação do documento é feita via serviço de consulta da Braspag ao sistema do Bradesco. 
+1.A conciliação do documento é feita via serviço de consulta da Cielo ao sistema do Bradesco. 
 1.Para receber as notificações de pagamento, a loja deve ter cadastrada a URL de Notificação e eventualmente utilizar nosso serviço de consulta. 
+
+IMAGEM 2
+
+
+
+
+
+### Como faço para habilitar a funcionalidade?
+
+O lojista deverá contatar o gerente de relacionamento do Banco Bradesco para solicitar a contratação do Boleto Registrado via Gerenciador API;
+A equipe técnica do Banco enviará para o e-mail do solicitante os dados de acesso ao Gerenciador API.
+No painel do Bradesco, o lojista deverá acesse a aba “Configurações” e escolher a opção “Meios de Pagamento”.
+O campo “Palavra-secreta” deve ser preenchido com uma senha. A operação é confirmada clicando em “Gerar nova chave de segurança”:
