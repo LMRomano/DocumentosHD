@@ -4,7 +4,7 @@ category: API CIELO ECOMMERCE
 order: 1
 ---
 
-### O que é?
+### O que é Boleto Registrado?
 
 O Boleto Registrado é um dos meios de pagamentos disponibilizados no E-commerce. Com o objetivo de mitigar fraudes, a Febraban em conjunto com os Bancos desenvolveu a modalidade registrada, tendo um controle centralizado de todos os boletos emitidos.  
 
