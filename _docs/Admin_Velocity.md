@@ -40,11 +40,11 @@ Para habilitar o Velocity basta:
 
 1 - Acessar os dados de **Cadastro de Lojistas 3.0/Api Cielo Ecommerce**&nbsp;indo at&eacute; “**Demais funcionalidades”**
 
-![](images/velocity/V0.JPG)![](/uploads/versions/V0---x----379-195x---.JPG)
+![](/uploads/versions/V0---x----379-195x---.JPG)
 
 2 - Dentro de **Demais funcionalidades** Marcar o op&ccedil;&atilde;o velocity
 
-![](/uploads/versions/V1---x----501-511x---.JPG)
+![](/uploads/versions/V1.JPG)
 
 3 - Com o Velocity habilitado, a op&ccedil;&atilde;o **“Configurar”** estar&aacute; disponivel ao lado da op&ccedil;&atilde;o “Velocity”. Esse menu ser&aacute; analisado mais afrente neste manual
 
