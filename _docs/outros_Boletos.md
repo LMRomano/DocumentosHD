@@ -82,15 +82,15 @@ O Lojista precisará informar ao HD os sequintes dados:
  
 Com esses dados, acesse siga os passos abaixo:
 
-1. Acesse o  Admin Braspag e selecione a opção “**Pesquisar Estabelecimento**”, existente dentro da aba “Admin” do menu superior:
+1 - Acesse o  Admin Braspag e selecione a opção “**Pesquisar Estabelecimento**”, existente dentro da aba “Admin” do menu superior:
 
 ![](http://sizzling-oryx.cloudvent.net/images/Boletos/AB1.PNG)
 
-2. Utilize os filtros para localizar a loja:
+2 - Utilize os filtros para localizar a loja:
 
 ![](http://sizzling-oryx.cloudvent.net/images/Boletos/AB2.PNG)
 
-3. Dentro do cadastro da loja, vá até a sessão “**Meios de pagamento**” e clique no botão “**Editar**” ao lado do Boleto: 
+3 - Dentro do cadastro da loja, vá até a sessão “**Meios de pagamento**” e clique no botão “**Editar**” ao lado do Boleto: 
 
 ![](http://sizzling-oryx.cloudvent.net/images/Boletos/AB3.PNG)
 
