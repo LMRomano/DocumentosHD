@@ -34,7 +34,9 @@ O mesmo código é usado para todos os bancos, e podem ser visualizado em:
 
 ## Boleto Bradesco
 
-[]!(http://sizzling-oryx.cloudvent.net/images/Boletos/Bradesco.jpg)
+![](http://sizzling-oryx.cloudvent.net/images/Boletos/Bradesco.jpg)
+
+
 
 ### Como funciona?
 
