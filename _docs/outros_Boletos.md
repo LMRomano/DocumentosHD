@@ -38,13 +38,13 @@ O mesmo código é usado para todos os bancos, e podem ser visualizado em:
 ### Como funciona?
 
 1. O comprador, após escolher o produto na loja virtual, seleciona a forma de pagamento Boleto Bradesco;
-1.A loja virtual envia para a Cielo uma requisição chamando o meio de pagamento correspondente;
-1.A Cielo se comunica com a aplicação do Banco Bradesco solicitando o registro do boleto;
-1.Caso o registro seja realizado com sucesso, o Banco responde à solicitação devolvendo os dados de cobrança (código de barras, linha digitável, etc) e a **URL do Boleto**;
-1.A Cielo envia no response o link para que a loja possa encaminhar ao comprador am ambiente Bancário;
-1.O cliente acessa a URL do boleto (renderização) e então pode realizar o pagamento; 
-1.A conciliação do documento é feita via serviço de consulta da Cielo ao sistema do Bradesco. 
-1.Para receber as notificações de pagamento, a loja deve ter cadastrada a URL de Notificação e eventualmente utilizar nosso serviço de consulta. 
+1. A loja virtual envia para a Cielo uma requisição chamando o meio de pagamento correspondente;
+1. A Cielo se comunica com a aplicação do Banco Bradesco solicitando o registro do boleto;
+1. Caso o registro seja realizado com sucesso, o Banco responde à solicitação devolvendo os dados de cobrança (código de barras, linha digitável, etc) e a **URL do Boleto**;
+1. A Cielo envia no response o link para que a loja possa encaminhar ao comprador am ambiente Bancário;
+1. O cliente acessa a URL do boleto (renderização) e então pode realizar o pagamento; 
+1. A conciliação do documento é feita via serviço de consulta da Cielo ao sistema do Bradesco. 
+1. Para receber as notificações de pagamento, a loja deve ter cadastrada a URL de Notificação e eventualmente utilizar nosso serviço de consulta. 
 
 IMAGEM 2
 
