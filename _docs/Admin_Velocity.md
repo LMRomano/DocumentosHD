@@ -1,7 +1,7 @@
 ---
 title: Velocity
 category: API CIELO ECOMMERCE
-order: 2
+order: 1
 ---
 
 
@@ -11,7 +11,7 @@ O Velocity &eacute; um tipo de mecanismo de preven&ccedil;&atilde;o &agrave; ten
 
 Para estabelecimentos comerciais que atuam no mercado de com&eacute;rcio eletr&ocirc;nico e eventualmente recebem transa&ccedil;&otilde;es fraudulentas, o Velocity &eacute; um produto que identificar&aacute; os comportamentos suspeitos de fraude. A ferramenta tem o intuito de auxiliar na an&aacute;lise de fraude por um custo bem menor que uma ferramenta mais tradicional de mercado.
 
-Ela &eacute; uma aliada na avalia&ccedil;&atilde;o de comportamentos suspeitos de compra, pois os c&aacute;lculos ser&atilde;o baseados em `elementos de rastreabilidade`{: .highlighter-rouge.highlighter-rouge}.
+Ela &eacute; uma aliada na avalia&ccedil;&atilde;o de comportamentos suspeitos de compra, pois os c&aacute;lculos ser&atilde;o baseados em `elementos de rastreabilidade`{: .highlighter-rouge.highlighter-rouge.highlighter-rouge}.
 
 O Velocity oferece 4 tipos de funcionalidades para validar dados transacionais:
 
@@ -38,9 +38,9 @@ As principais altera&ccedil;&otilde;es que devem ser realizadas **ocorrem dentro
 
 Para habilitar o Velocity basta:
 
-1 - Acessar os dados de **Cadastro de Lojistas 3.0/Api Cielo Ecommerce**&nbsp;indo at&eacute; "**Demais funcionalidades"**
+1 - Acessar os dados de **Cadastro de Lojistas 3.0/Api Cielo Ecommerce**&nbsp;indo at&eacute; “**Demais funcionalidades”**
 
-![](images/velocity/V0.JPG)
+![](images/velocity/V0.JPG)![](/uploads/versions/V0---x----379-195x---.JPG)
 
 2 - Dentro de **Demais funcionalidades** Marcar o op&ccedil;&atilde;o velocity
 
@@ -56,88 +56,87 @@ Dados dos retornados pelo Velocity
 
 | Propriedade | Descri&ccedil;&atilde;o | Tipo | Tamanho |
 | --- | --- | --- | --- |
-| `VelocityAnalysis.Id`{: .highlighter-rouge.highlighter-rouge} | Identificador da an&aacute;lise efetuada | GUID | 36 |
-| `VelocityAnalysis.ResultMessage`{: .highlighter-rouge.highlighter-rouge} | Accept ou Reject | Texto | 25 |
-| `VelocityAnalysis.Score`{: .highlighter-rouge.highlighter-rouge} | 100 | N&uacute;mero | 10 |
-| `VelocityAnalysis.RejectReasons.RuleId`{: .highlighter-rouge.highlighter-rouge} | C&oacute;digo da Regra que rejeitou | N&uacute;mero | 10 |
-| `VelocityAnalysis.RejectReasons.Message`{: .highlighter-rouge.highlighter-rouge} | Descri&ccedil;&atilde;o da Regra que rejeitou | Texto | 512 |
+| `VelocityAnalysis.Id`{: .highlighter-rouge.highlighter-rouge.highlighter-rouge} | Identificador da an&aacute;lise efetuada | GUID | 36 |
+| `VelocityAnalysis.ResultMessage`{: .highlighter-rouge.highlighter-rouge.highlighter-rouge} | Accept ou Reject | Texto | 25 |
+| `VelocityAnalysis.Score`{: .highlighter-rouge.highlighter-rouge.highlighter-rouge} | 100 | N&uacute;mero | 10 |
+| `VelocityAnalysis.RejectReasons.RuleId`{: .highlighter-rouge.highlighter-rouge.highlighter-rouge} | C&oacute;digo da Regra que rejeitou | N&uacute;mero | 10 |
+| `VelocityAnalysis.RejectReasons.Message`{: .highlighter-rouge.highlighter-rouge.highlighter-rouge} | Descri&ccedil;&atilde;o da Regra que rejeitou | Texto | 512 |
 
 ### Resposta
 
-```
-{
-  "MerchantOrderId": "2017051202",
-  "Customer": {
-    "Name": "Nome do Comprador",
-    "Identity": "12345678909",
-    "IdentityType": "CPF",
-    "Email": "comprador@cielo.com.br",
-    "Address": {
-      "Street": "Alameda Xingu",
-      "Number": "512",
-      "Complement": "27 andar",
-      "ZipCode": "12345987",
-      "City": "São Paulo",
-      "State": "SP",
-      "Country": "BRA"
-    },
-    "DeliveryAddress": {
-      "Street": "Alameda Xingu",
-      "Number": "512",
-      "Complement": "27 andar",
-      "ZipCode": "12345987",
-      "City": "São Paulo",
-      "State": "SP",
-      "Country": "BRA"
-    }
-  },
-  "Payment": {
-    "ServiceTaxAmount": 0,
-    "Installments": 1,
-    "Interest": "ByMerchant",
-    "Capture": true,
-    "Authenticate": false,
-    "Recurrent": false,
-    "CreditCard": {
-      "CardNumber": "455187******0181",
-      "Holder": "Nome do Portador",
-      "ExpirationDate": "12/2027",
-      "SaveCard": false,
-      "Brand": "Undefined"
-    },
-    "VelocityAnalysis": {
-      "Id": "2d5e0463-47be-4964-b8ac-622a16a2b6c4",
-      "ResultMessage": "Reject",
-      "Score": 100,
-      "RejectReasons": [
-        {
-          "RuleId": 49,
-          "Message": "Bloqueado pela regra CardNumber. Name: Máximo de 3 Hits de Cartão em 1 dia. HitsQuantity: 3\. HitsTimeRangeInSeconds: 1440\. ExpirationBlockTimeInSeconds: 1440"
-        }
-      ]
-    },
-    "PaymentId": "2d5e0463-47be-4964-b8ac-622a16a2b6c4",
-    "Type": "CreditCard",
-    "Amount": 10000,
-    "Currency": "BRL",
-    "Country": "BRA",
-    "Provider": "Simulado",
-    "ReasonCode": 16,
-    "ReasonMessage": "AbortedByFraud",
-    "Status": 0,
-    "ProviderReturnCode": "BP171",
-    "ProviderReturnMessage": "Rejected by fraud risk (velocity)",
-    "Links": [
-      {
-        "Method": "GET",
-        "Rel": "self",
-        "Href": "https://apiquery.cieloecommerce.cielo.com.br/1/sales/2d5e0463-47be-4964-b8ac-622a16a2b6c4"
-      }
-    ]
-  }
-}
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"MerchantOrderId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017051202"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"Customer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Nome do Comprador"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"Identity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12345678909"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"IdentityType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CPF"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"Email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"comprador@cielo.com.br"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"Address"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"Street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Alameda Xingu"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"Number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"512"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"Complement"</span><span class="p">:</span><span class="w"> </span><span class="s2">"27 andar"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"ZipCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12345987"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"City"</span><span class="p">:</span><span class="w"> </span><span class="s2">"S&atilde;o Paulo"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"State"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SP"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"Country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRA"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"DeliveryAddress"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"Street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Alameda Xingu"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"Number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"512"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"Complement"</span><span class="p">:</span><span class="w"> </span><span class="s2">"27 andar"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"ZipCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12345987"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"City"</span><span class="p">:</span><span class="w"> </span><span class="s2">"S&atilde;o Paulo"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"State"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SP"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"Country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRA"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"Payment"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"ServiceTaxAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"Installments"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"Interest"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ByMerchant"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"Capture"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"Authenticate"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"Recurrent"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"CreditCard"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"CardNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"455187******0181"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"Holder"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Nome do Portador"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"ExpirationDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12/2027"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"SaveCard"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"Brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Undefined"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"VelocityAnalysis"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"Id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2d5e0463-47be-4964-b8ac-622a16a2b6c4"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"ResultMessage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Reject"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"Score"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"RejectReasons"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"RuleId"</span><span class="p">:</span><span class="w"> </span><span class="mi">49</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"Message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bloqueado pela regra CardNumber. Name: M&aacute;ximo de 3 Hits de Cart&atilde;o em 1 dia. HitsQuantity: 3\. HitsTimeRangeInSeconds: 1440\. ExpirationBlockTimeInSeconds: 1440"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"PaymentId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2d5e0463-47be-4964-b8ac-622a16a2b6c4"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"Type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CreditCard"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"Amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">10000</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"Currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRL"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"Country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRA"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"Provider"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Simulado"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"ReasonCode"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"ReasonMessage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AbortedByFraud"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"Status"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"ProviderReturnCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BP171"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"ProviderReturnMessage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rejected by fraud risk (velocity)"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"Links"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"Method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"Rel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"self"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"Href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://apiquery.cieloecommerce.cielo.com.br/1/sales/2d5e0463-47be-4964-b8ac-622a16a2b6c4"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
 
-```
+</span></code></pre></div>
 
 ## Criando Regras de seguran&ccedil;a Velocity
 
@@ -145,9 +144,9 @@ Para que o velocity funcione, o HD necessitar&aacute; cadastrar as regras de ana
 
 Antes de realizar o cadastro das regras, &eacute; importante compreender o funcionamento do Velocity:
 
-A an&aacute;lise ocorre em cima de cada `elemento de rastreabilidade`{: .highlighter-rouge.highlighter-rouge} (ER), contando quantas vezes (Q) o elemento foi identificado dentro de um determinado per&iacute;odo (P)
+A an&aacute;lise ocorre em cima de cada `elemento de rastreabilidade`{: .highlighter-rouge.highlighter-rouge.highlighter-rouge} (ER), contando quantas vezes (Q) o elemento foi identificado dentro de um determinado per&iacute;odo (P)
 
-`Elementos de rastreabilidade`{: .highlighter-rouge.highlighter-rouge} s&atilde;o:
+`Elementos de rastreabilidade`{: .highlighter-rouge.highlighter-rouge.highlighter-rouge} s&atilde;o:
 
 | **Elementos de Rastreabilidade** |
 | --- |
@@ -203,16 +202,16 @@ ADICIONAR Log1
 
 ## Quarentena
 
-A Quarentena &eacute; uma tabela que armazena os valores por tipo de `Elementos de rastreabilidade`{: .highlighter-rouge.highlighter-rouge} com um determinado tempo de expira&ccedil;&atilde;o.
+A Quarentena &eacute; uma tabela que armazena os valores por tipo de `Elementos de rastreabilidade`{: .highlighter-rouge.highlighter-rouge.highlighter-rouge} com um determinado tempo de expira&ccedil;&atilde;o.
 
-Ao cadastrar uma regra &eacute; poss&iacute;vel especificar quanto tempo o valor de um determinado `Elemento de rastreabilidade`{: .highlighter-rouge.highlighter-rouge} ir&aacute; ser levado em considera&ccedil;&atilde;o nas pr&oacute;ximas an&aacute;lises, ou seja, se o lojista quiser identificar a quantidade de vezes que o mesmo n&uacute;mero de cart&atilde;o se repetiu para um per&iacute;odo de 12 horas dentro de um intervalo de 2 dias, n&atilde;o ser&aacute; necess&aacute;rio o Velocity realizar esta contagem retroativa agrupando por per&iacute;odo. Neste cen&aacute;rio por exemplo, a aplica&ccedil;&atilde;o teria que realizar a contagem para os seguintes intervalos:
+Ao cadastrar uma regra &eacute; poss&iacute;vel especificar quanto tempo o valor de um determinado `Elemento de rastreabilidade`{: .highlighter-rouge.highlighter-rouge.highlighter-rouge} ir&aacute; ser levado em considera&ccedil;&atilde;o nas pr&oacute;ximas an&aacute;lises, ou seja, se o lojista quiser identificar a quantidade de vezes que o mesmo n&uacute;mero de cart&atilde;o se repetiu para um per&iacute;odo de 12 horas dentro de um intervalo de 2 dias, n&atilde;o ser&aacute; necess&aacute;rio o Velocity realizar esta contagem retroativa agrupando por per&iacute;odo. Neste cen&aacute;rio por exemplo, a aplica&ccedil;&atilde;o teria que realizar a contagem para os seguintes intervalos:
 
 * D-2 = 0h as 12h
 * D-2 = 12h as 0h
 * D-1 = 0h as 12h
 * D-1 = 12h as 0h
 
-Com a quarentena, a aplica&ccedil;&atilde;o n&atilde;o ir&aacute; realizar essa contagem retroativa por per&iacute;odo, pois ao realizar uma an&aacute;lise, ser&aacute; verifica se existe algum valor do `Elemento de rastreabilidade`{: .highlighter-rouge.highlighter-rouge} em quarentena.
+Com a quarentena, a aplica&ccedil;&atilde;o n&atilde;o ir&aacute; realizar essa contagem retroativa por per&iacute;odo, pois ao realizar uma an&aacute;lise, ser&aacute; verifica se existe algum valor do `Elemento de rastreabilidade`{: .highlighter-rouge.highlighter-rouge.highlighter-rouge} em quarentena.
 
 **Exemplo:** Usando a regra acima, o tempo de expira&ccedil;&atilde;o se definido em 2 dias, a regra ser&aacute; analisada apenas para o per&iacute;odo j&aacute; configurado, ou seja, 12 horas para traz e ir&aacute; verificar durante 2 dias se n&uacute;mero do cart&atilde;o se encontra em quarentena.
 
@@ -274,18 +273,18 @@ ADICIONAR LogQ1
 
 ## Blacklist
 
-A BlackList &eacute; uma tabela oferecida pelo Velocity onde se armazena valores por tipo de `elementos de rastreabilidades`{: .highlighter-rouge.highlighter-rouge} que o lojista deseja **bloquear** automaticamente.
+A BlackList &eacute; uma tabela oferecida pelo Velocity onde se armazena valores por tipo de `elementos de rastreabilidades`{: .highlighter-rouge.highlighter-rouge.highlighter-rouge} que o lojista deseja **bloquear** automaticamente.
 
-Em transa&ccedil;&atilde;o a ser analisada, caso `elementos de rastreabilidades`{: .highlighter-rouge.highlighter-rouge}/Documento que esteja na blacklist, a mesma ser&aacute; bloqueada, independente de existir regra cadastra para este tipo de elemento de rastreabilidade ou n&atilde;o, e ter&aacute; o retorno informado que a mesma foi **bloqueada pela blacklist**, ou seja, a transa&ccedil;&atilde;o n&atilde;o ser&aacute; enviada a Autoriza&ccedil;&atilde;o
+Em transa&ccedil;&atilde;o a ser analisada, caso `elementos de rastreabilidades`{: .highlighter-rouge.highlighter-rouge.highlighter-rouge}/Documento que esteja na blacklist, a mesma ser&aacute; bloqueada, independente de existir regra cadastra para este tipo de elemento de rastreabilidade ou n&atilde;o, e ter&aacute; o retorno informado que a mesma foi **bloqueada pela blacklist**, ou seja, a transa&ccedil;&atilde;o n&atilde;o ser&aacute; enviada a Autoriza&ccedil;&atilde;o
 
 ### Como configurar uma Blacklist
 
 A configura&ccedil;&atilde;o da Blacklist &eacute; realizada via o HD Cielo. Basta solicitar a libera&ccedil;&atilde;o da funcionalidade no Velocity informando os dados abaixo:
 
-* Qual `elemento de rastreabilidade`{: .highlighter-rouge.highlighter-rouge} dever&aacute; ser bloqueado / EX: Identidade
-* Informar o valor do `elemento de rastreabilidade`{: .highlighter-rouge.highlighter-rouge}a ser bloqueado /EX: Identidade = 21.435.787-95
+* Qual `elemento de rastreabilidade`{: .highlighter-rouge.highlighter-rouge.highlighter-rouge} dever&aacute; ser bloqueado / EX: Identidade
+* Informar o valor do `elemento de rastreabilidade`{: .highlighter-rouge.highlighter-rouge.highlighter-rouge}a ser bloqueado /EX: Identidade = 21.435.787-95
 
-&Eacute; possivel realizar varios cadastros para diferentes `elementos de rastreabilidades`{: .highlighter-rouge.highlighter-rouge}. Caso eles sejam reconhecidos no contrato, a transa&ccedil;&atilde;o n&atilde;o ser&aacute; enviada a Autoriza&ccedil;&atilde;o
+&Eacute; possivel realizar varios cadastros para diferentes `elementos de rastreabilidades`{: .highlighter-rouge.highlighter-rouge.highlighter-rouge}. Caso eles sejam reconhecidos no contrato, a transa&ccedil;&atilde;o n&atilde;o ser&aacute; enviada a Autoriza&ccedil;&atilde;o
 
 O Cadastro &eacute; realizado dentro da tela de configura&ccedil;&atilde;o do Velocity:
 
@@ -303,18 +302,18 @@ O Cadastro &eacute; realizado dentro da tela de configura&ccedil;&atilde;o do Ve
 
 ## Whitelist
 
-A Whitelist &eacute; uma tabela oferecida pelo Velocity onde se armazena valores por tipo de `elementos de rastreabilidades`{: .highlighter-rouge.highlighter-rouge} que o lojista deseja **liberar** automaticamente das regras de seguran&ccedil;a do velocity.
+A Whitelist &eacute; uma tabela oferecida pelo Velocity onde se armazena valores por tipo de `elementos de rastreabilidades`{: .highlighter-rouge.highlighter-rouge.highlighter-rouge} que o lojista deseja **liberar** automaticamente das regras de seguran&ccedil;a do velocity.
 
-Em transa&ccedil;&atilde;o a ser analisada, caso `elementos de rastreabilidades`{: .highlighter-rouge.highlighter-rouge}/Documento que esteja na Whitelist, a mesma n&atilde;o ser&aacute; analisada pelo velocity, independente de existir regra cadastra para este tipo de elemento de rastreabilidade ou n&atilde;o, sendo enviada para a autoriza&ccedil;&atilde;o como uma transa&ccedil;&atilde;o normal.
+Em transa&ccedil;&atilde;o a ser analisada, caso `elementos de rastreabilidades`{: .highlighter-rouge.highlighter-rouge.highlighter-rouge}/Documento que esteja na Whitelist, a mesma n&atilde;o ser&aacute; analisada pelo velocity, independente de existir regra cadastra para este tipo de elemento de rastreabilidade ou n&atilde;o, sendo enviada para a autoriza&ccedil;&atilde;o como uma transa&ccedil;&atilde;o normal.
 
 ### Como configurar uma Whitelist
 
 A configura&ccedil;&atilde;o da Whitelist &eacute; realizada via o HD Cielo. Basta solicitar a libera&ccedil;&atilde;o da funcionalidade no Velocity informando os dados abaixo:
 
-* Qual `elemento de rastreabilidade`{: .highlighter-rouge.highlighter-rouge} dever&aacute; ser incluso na Whitelist / EX: Identidade
-* Informar o valor do `elemento de rastreabilidade`{: .highlighter-rouge.highlighter-rouge}a ser liberado /EX: Identidade = 21.435.787-95
+* Qual `elemento de rastreabilidade`{: .highlighter-rouge.highlighter-rouge.highlighter-rouge} dever&aacute; ser incluso na Whitelist / EX: Identidade
+* Informar o valor do `elemento de rastreabilidade`{: .highlighter-rouge.highlighter-rouge.highlighter-rouge}a ser liberado /EX: Identidade = 21.435.787-95
 
-&Eacute; possivel realizar varios cadastros para diferentes `elementos de rastreabilidades`{: .highlighter-rouge.highlighter-rouge}. Caso eles sejam reconhecidos no contrato, a transa&ccedil;&atilde;o ser&aacute; enviada a Autoriza&ccedil;&atilde;o sem ser analisada pelo Velocity
+&Eacute; possivel realizar varios cadastros para diferentes `elementos de rastreabilidades`{: .highlighter-rouge.highlighter-rouge.highlighter-rouge}. Caso eles sejam reconhecidos no contrato, a transa&ccedil;&atilde;o ser&aacute; enviada a Autoriza&ccedil;&atilde;o sem ser analisada pelo Velocity
 
 O Cadastro &eacute; realizado dentro da tela de configura&ccedil;&atilde;o do Velocity:
 
