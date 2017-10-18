@@ -40,7 +40,7 @@ Para habilitar o Velocity basta:
 
 1 - Acessar os dados de **Cadastro de Lojistas 3.0/Api Cielo Ecommerce**&nbsp;indo at&eacute; “**Demais funcionalidades”**
 
-![](https://www.google.com.br/images/branding/googleg/1x/googleg_standard_color_128dp.png)
+![](http://sizzling-oryx.cloudvent.net/images/Velocity/V0.JPG)
 
 2 - Dentro de **Demais funcionalidades** Marcar o op&ccedil;&atilde;o velocity
 
@@ -181,15 +181,15 @@ O Cadastro &eacute; realizado dentro da tela de configura&ccedil;&atilde;o do Ve
 
 1 - Dentro de **Demais funcionalidades** clique em **“Configurar”**
 
-![](/uploads/versions/V2---x----379-195x---.JPG)
+![](http://sizzling-oryx.cloudvent.net/images/Velocity/V2.JPG)
 
 2 - A tela abaixo &eacute; a tela de configura&ccedil;&atilde;o do Velocity e todas as suas funcionalidades. Clique em “Regras”:
 
-![](/uploads/versions/V3---x----1009-745x---.JPG)
+![](http://sizzling-oryx.cloudvent.net/images/Velocity/V3.JPG)
 
 2 - Dentro de “Regra”, basta incluir as regras desejadas pelo lojista:
 
-![](/uploads/versions/V4---x----1394-516x---.JPG)
+![](http://sizzling-oryx.cloudvent.net/images/Velocity/V4.JPG)
 
 &nbsp;
 
@@ -256,15 +256,15 @@ O Cadastro &eacute; realizado dentro da tela de configura&ccedil;&atilde;o do Ve
 
 1 - Dentro de **Demais funcionalidades** clique em **“Configurar”**
 
-![](/uploads/versions/V2---x----379-195x---.JPG)
+![](http://sizzling-oryx.cloudvent.net/images/Velocity/V2.JPG)
 
 2 - Na tela de configura&ccedil;&otilde;es do Velocity clique em “Quarentena”:
 
-![](/uploads/versions/V3---x----1009-745x---.JPG)
+![](http://sizzling-oryx.cloudvent.net/images/Velocity/V3.JPG)
 
 2 - Dentro de “Quarentena”, basta incluir as variaveis enviadas pelo lojista:
 
-![](/uploads/versions/V5---x----1016-782x---.JPG)
+![](http://sizzling-oryx.cloudvent.net/images/Velocity/V5.JPG)
 
 ### Exemplos de LOG
 
@@ -291,15 +291,15 @@ O Cadastro &eacute; realizado dentro da tela de configura&ccedil;&atilde;o do Ve
 
 1 - Dentro de **Demais funcionalidades** clique em **“Configurar”**
 
-![](/uploads/versions/V2---x----379-195x---.JPG)
+![](http://sizzling-oryx.cloudvent.net/images/Velocity/V2.JPG)
 
 2 - Na tela de configura&ccedil;&otilde;es do Velocity clique em “Blacklist”:
 
-![](/uploads/versions/V3---x----1009-745x---.JPG)
+![](http://sizzling-oryx.cloudvent.net/images/Velocity/V3.JPG)
 
 2 - Dentro de “Blacklist”, basta incluir as variaveis enviadas pelo lojista:
 
-![](/uploads/versions/V6---x----1013-527x---.JPG)
+![](http://sizzling-oryx.cloudvent.net/images/Velocity/V6.JPG)
 
 ## Whitelist
 
@@ -320,15 +320,15 @@ O Cadastro &eacute; realizado dentro da tela de configura&ccedil;&atilde;o do Ve
 
 1 - Dentro de **Demais funcionalidades** clique em **“Configurar”**
 
-![](/uploads/versions/V2---x----379-195x---.JPG)
+![](http://sizzling-oryx.cloudvent.net/images/Velocity/V2.JPG)
 
 2 - Na tela de configura&ccedil;&otilde;es do Velocity clique em “Whitelist”:
 
-![](/uploads/versions/V3---x----1009-745x---.JPG)
+![](http://sizzling-oryx.cloudvent.net/images/Velocity/V3.JPG)
 
 2 - Dentro de “Whitelist”, basta incluir as variaveis enviadas pelo lojista:
 
-![](/uploads/versions/V6---x----1013-527x---.JPG)
+![](http://sizzling-oryx.cloudvent.net/images/Velocity/V6.JPG)
 
 ## Hist&oacute;rico de Atualiza&ccedil;&otilde;es:
 
