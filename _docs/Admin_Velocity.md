@@ -44,7 +44,8 @@ Para habilitar o Velocity basta:
 
 2 - Dentro de **Demais funcionalidades** Marcar o op&ccedil;&atilde;o velocity
 
-![](/uploads/versions/V1.JPG)
+![](./images/V1.JPG)
+
 
 3 - Com o Velocity habilitado, a op&ccedil;&atilde;o **“Configurar”** estar&aacute; disponivel ao lado da op&ccedil;&atilde;o “Velocity”. Esse menu ser&aacute; analisado mais afrente neste manual
 
