@@ -19,7 +19,7 @@ Esta modalidade de cobrança permite que o comprador efetue o pagamento do bolet
 Atender à obrigatoriedade da Febraban de adequação dos boletos para modalidade registrada a partir do dia 10/07/2017, conforme tabela abaixo:
 
 
-IMAGEM 1
+![](http://sizzling-oryx.cloudvent.net/images/Boletos/b1.png)
 
 ### Como a Integração ocorre na 3.0?
 
@@ -51,7 +51,7 @@ O mesmo código é usado para todos os bancos, e podem ser visualizado em:
 
 
 
-IMAGEM 2
+![](http://sizzling-oryx.cloudvent.net/images/Boletos/B2.png)
 
 
 
@@ -66,7 +66,70 @@ IMAGEM 2
 2. O Lojista deverá realizar atualização dos dados cadastrais Bradesco para poder Transacionar. Ver [Tutorial](https://developercielo.github.io/Habilitacao-meios-de-pagamento/#bradesco).
  
 
-### HD Cielo - Ativando o Boleto no Bradesco
+### HD Cielo - Ativando o Boleto no Admin
+
+O Lojista precisará informar ao HD os sequintes dados:
+
+* **Agência:** código agência com traço.
+* **Conta:** Conta corrente com traço.
+* **Carteira:** Não é necessário para este boleto
+* **Conciliação**: Número do convênio de cobrança (7 posições)
+* **Convênio** Convênio de comércio eletrônico (6 posições)
+ 
+Com esses dados, acesse siga os passos abaixo:
+
+1. Acesse o  Admin Braspag e selecione a opção “**Pesquisar Estabelecimento**”, existente dentro da aba “Admin” do menu superior:
+
+2. Utilize os filtros para localizar a loja:
+
+3. Dentro do cadastro da loja, vá até a sessão “**Meios de pagamento**” e clique no botão “**Editar**” ao lado do Boleto: 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
