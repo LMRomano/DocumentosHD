@@ -86,7 +86,7 @@ Além desses dados, é necessario as credenciais do Bradesco:
 * **Usuário**: E-mail usado no acesso do [Painel do Bradesco](https://meiosdepagamentobradesco.com.br/gerenciadorapi/login.jsp)
 * **Senha**: Chave de segurança criada dentro do [Painel do Bradesco](https://meiosdepagamentobradesco.com.br/gerenciadorapi/login.jsp). **Não é a senha de acesso ao Painel Bradesco**
 
-> Essas credenciais são usadas para que a 3.0 possa consultar o status do Boleto. <BR><BR> **Exemplos:** <BR> **Usuário:** cielo@cielo.com <BR> **Senha / Chave de Segurança:** qcnmFA-Y2rGm4meWLzrEzSpdPARBsmblZSqfKLwq7DM
+> Essas credenciais são usadas para que a 3.0 possa consultar o status do Boleto. <BR><BR> **Exemplos:** <BR><br> **Usuário:** cielo@cielo.com <BR> **Senha / Chave de Segurança:** qcnmFA-Y2rGm4meWLzrEzSpdPARBsmblZSqfKLwq7DM
 
 
 Com esses dados, acesse o Admin e siga os passos abaixo:
@@ -127,10 +127,33 @@ Dados e formatos a serem inseridos:
 
 
 
+### Como funciona a Conciliação Automática?
+
+Para o meio de pagamento Boleto Registrado Bradesco (585) a conciliação é feita via sondagem em lote. A Sondagem em lote funciona da seguinte forma: diariamente a Braspag consulta o sistema do Bradesco em busca de boletos pagos na data anterior. Essa sondagem ocorre pela manhã (às 4h, 6h, 8h, 10h e 12h). Houve um ganho de performance de mais de 11.000%, no cenário de 1 dia de produção. Reduzimos o tempo de conciliação para apenas 5 minutos (tempo este que antes poderia levar até 10 horas).
+A conciliação dos Boletos Bradesco (SPS) (568) é feita via serviço de consulta da Braspag ao sistema do Bradesco (processo que consulta pedido por pedido, um a um). 
+Para receber as notificações de pagamento, a loja deve ter cadastrada a URL de Notificação e, eventualmente, utilizar nosso serviço de consulta. 
+
+**OBS:** Hoje, a sonda considera transações que estejam com a data de vencimento dentro do intervalo de 30 dias anteriores e 30 dias posteriores à data atual. Este intervalo existe devido ao alto volume de boletos gerados, para que haja limitação do processo de sondagem.
 
 
 
+### Conciliação Manual de Boletos
 
+Para conciliar o boleto de forma manual, basta localizar o pedido no Painel Administrativo e dentro dos Detalhes da Transação localizar o botão “Conciliar”. Desta forma o pedido terá o status alterado de “Não Pago" para “Pago”.
+
+Notificação de mudança de status
+Para que a Braspag possa atualizar o status de pagamento dos boletos das lojas, o cliente precisa configurar a “URL de Notificação" de acordo com as instruções contidas no manual de integração, e disponibilizá-la via ticket.
+
+Após notificarmos a URL fornecida, o lojista deverá consultar nosso Webservice para identificar qual foi a mudança de status que ocorreu (notificação de pagamento, notificação de cancelamento do pedido, etc), procedimento também descrito no manual de integração. 
+ 
+
+### Contatos Bradesco
+
+Suporte: 
+* kit@scopus.com.br
+* homologacao@scopus.com.br
+* com.eletronico@bradesco.com.br
+* comerciobradesco@scopus.com.br 
 
 
 
