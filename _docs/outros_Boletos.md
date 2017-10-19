@@ -92,7 +92,7 @@ Com esses dados, acesse siga os passos abaixo:
 
 3 - Dentro do cadastro da loja, vá até a sessão “**Meios de pagamento**” e clique no botão “**Editar**” ao lado do Boleto: 
 
-![](http://sizzling-oryx.cloudvent.net/images/Boletos/AB3.PNG)
+![](http://sizzling-oryx.cloudvent.net/images/Boletos/AB3.png)
 
 
 
