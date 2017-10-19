@@ -150,9 +150,6 @@ Suporte:
 * com.eletronico@bradesco.com.br
 * comerciobradesco@scopus.com.br 
 
-
-
-
 -------------------------------------------------------------------
 
 
@@ -162,20 +159,14 @@ Suporte:
 
 ### Como funciona - Fluxo Transacional Banco do Brasil?
 
-1. O comprador, após escolher o produto na loja virtual, seleciona a forma de pagamento Boleto Bradesco;
-1. A loja virtual envia para a Cielo uma requisição chamando o meio de pagamento correspondente;
-1. A Cielo se comunica com a aplicação do Banco Bradesco solicitando o registro do boleto;
-1. Caso o registro seja realizado com sucesso, o Banco responde à solicitação devolvendo os dados de cobrança (código de barras, linha digitável, etc) e a **URL do Boleto**;
-1. A Cielo envia no response o link para que a loja possa encaminhar ao comprador am ambiente Bancário;
-1. O cliente acessa a URL do boleto (renderização) e então pode realizar o pagamento; 
-1. A conciliação do documento é feita via serviço de consulta da Cielo ao sistema do Bradesco. 
+1. O comprador, após escolher o produto na loja virtual, seleciona a forma de pagamento Boleto Registrado Banco do Brasil;
+1. A loja virtual envia para a Braspag uma requisição chamando o meio de pagamento correspondente;
+1. A Braspag se comunica com a aplicação do Banco solicitando o registro do boleto;
+1. O Banco responde à solicitação de registro;
+1. Caso o registro seja realizado com sucesso, a Braspag "gera" o boleto conforme os dados retornados pelo banco;
+1. A Braspag envia no response, o link para imprimir o boleto
+1. A loja retorna este link ao comprador
 1. Para receber as notificações de pagamento, a loja deve ter cadastrada a URL de Notificação e eventualmente utilizar nosso serviço de consulta. 
-
-
-
-
-
-
 
 
 
