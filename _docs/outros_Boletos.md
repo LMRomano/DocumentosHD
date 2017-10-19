@@ -120,6 +120,8 @@ Dados e formatos a serem inseridos:
 | **Nosso Numero**            | Contador incremental                   | 5 Dígitos  | Inserir "10000" -  A cada emissão de boleto esse numero aumenta em +1                                   |
 | **Vencimento**              | Prazo de validade do boleto            | 6 Dígitos  | é o valor padrão, se nenhum outro valor for enviado via API                                             |
 | **Assinatura de Afiliação** | Chave de segurança do **Bradesco**     | 50 Dígitos | Informado dentro [Painel do Bradesco](https://meiosdepagamentobradesco.com.br/gerenciadorapi/login.jsp) |                                                                                                       
+> No momento, é necessario solicitar a equipe de Suporte Braspag que o **Usuário** e **Senha** sejam cadastradas no boleto Bradesco. Após preencher os dados acima, entrem em contato com a Braspag fornecendo os dados de acesso a Sonda Bradesco <BR><BR><BR> **Exemplos:** <BR><br> **Usuário:** cielo@cielo.com <BR> **Senha / Chave de Segurança:** qcnmFA-Y2rGm4meWLzrEzSpdPARBsmblZSqfKLwq7DM
+
 
 5 - Basta salvar as alterações. Pronto, o boleto está cadastrado na loja.
 
@@ -151,6 +153,23 @@ Suporte:
 
 
 
+-------------------------------------------------------------------
+
+
+
+![](http://sizzling-oryx.cloudvent.net/images/Boletos/Bradesco.jpg)
+
+
+### Como funciona - Fluxo Transacional Banco do Brasil?
+
+1. O comprador, após escolher o produto na loja virtual, seleciona a forma de pagamento Boleto Bradesco;
+1. A loja virtual envia para a Cielo uma requisição chamando o meio de pagamento correspondente;
+1. A Cielo se comunica com a aplicação do Banco Bradesco solicitando o registro do boleto;
+1. Caso o registro seja realizado com sucesso, o Banco responde à solicitação devolvendo os dados de cobrança (código de barras, linha digitável, etc) e a **URL do Boleto**;
+1. A Cielo envia no response o link para que a loja possa encaminhar ao comprador am ambiente Bancário;
+1. O cliente acessa a URL do boleto (renderização) e então pode realizar o pagamento; 
+1. A conciliação do documento é feita via serviço de consulta da Cielo ao sistema do Bradesco. 
+1. Para receber as notificações de pagamento, a loja deve ter cadastrada a URL de Notificação e eventualmente utilizar nosso serviço de consulta. 
 
 
 
