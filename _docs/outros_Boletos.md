@@ -84,7 +84,7 @@ Com esses dados, acesse siga os passos abaixo:
 
 1 - Acesse o  Admin Braspag e selecione a opção “**Pesquisar Estabelecimento**”, existente dentro da aba “Admin” do menu superior:
 
-![](http://sizzling-oryx.cloudvent.net/images/Boletos/AB1.PNG)
+![](http://sizzling-oryx.cloudvent.net/images/Boletos/AB1.png)
 
 2 - Utilize os filtros para localizar a loja:
 
