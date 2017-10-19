@@ -88,7 +88,8 @@ Além desses dados, é necessario as credenciais do Bradesco:
 
 > Essas credenciais são usadas para que a 3.0 possa consultar o status do Boleto. <BR><BR> **Exemplos:** <BR> **Usuário: cielo@cielo.com <BR> **Senha / Chave de Segurança:** qcnmFA-Y2rGm4meWLzrEzSpdPARBsmblZSqfKLwq7DM
 
-Com esses dados, acesse siga os passos abaixo:
+
+Com esses dados, acesse o Admin e siga os passos abaixo:
 
 1 - Acesse o  Admin Braspag e selecione a opção “**Pesquisar Estabelecimento**”, existente dentro da aba “Admin” do menu superior:
 
