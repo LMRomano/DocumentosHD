@@ -74,12 +74,22 @@ O mesmo código é usado para todos os bancos, e podem ser visualizado em:
 
 O Lojista precisará informar ao HD os sequintes dados:
 
-* **Agência:** código agência com traço.
+
+* **Agência:** código agência com traço ou sem Hifen.
 * **Conta:** Conta corrente com traço.
 * **Carteira:** Não é necessário para este boleto
-* **Conciliação**: Número do convênio de cobrança (7 posições)
-* **Convênio** Convênio de comércio eletrônico (6 posições)
- 
+* **Conciliação**: Número do convênio de cobrança
+* **Convênio** Convênio de comércio eletrônico
+
+Além desses dados, é necessario as credenciais do Bradesco:
+
+* **Usuário**: E-mail usado no acesso do [Painel do Bradesco](https://meiosdepagamentobradesco.com.br/gerenciadorapi/login.jsp)
+* **Senha**: Chave de segurança criada dentro do [Painel do Bradesco](https://meiosdepagamentobradesco.com.br/gerenciadorapi/login.jsp). **Não é a senha de acesso ao Painel Bradesco**
+
+> Essas credenciais são usadas para que a  3.0 possa consultar o status do Boleto. <BR> Exemplos: <BR>
+
+
+
 Com esses dados, acesse siga os passos abaixo:
 
 1 - Acesse o  Admin Braspag e selecione a opção “**Pesquisar Estabelecimento**”, existente dentro da aba “Admin” do menu superior:
@@ -94,10 +104,23 @@ Com esses dados, acesse siga os passos abaixo:
 
 ![](http://sizzling-oryx.cloudvent.net/images/Boletos/AB3.png)
 
+4 - Digite os dados exibidos na tela de cadastros
+
+![](http://sizzling-oryx.cloudvent.net/images/Boletos/BR.PNG)
 
 
+Dados e formatos a serem inseridos:
 
-
+| Dados                       | Descrição                              | Formato   | OBS                                                                                                     |
+|-----------------------------|----------------------------------------|-----------|---------------------------------------------------------------------------------------------------------|
+| **Agência**                 | Código agência                         | 4 Dígitos | com  ou sem Hifen                                                                                       |
+| **Conta:**                  | Conta corrente                         | 7 Dígitos | com Hifen                                                                                               |
+| **Carteira:**               | **Não é necessário boleto Registrado** | 2 dígitos | z                                                                                                       |
+| **Conciliação**             | Número do convênio de cobrança         | 7 Dígitos | Informado dentro [Painel do Bradesco](https://meiosdepagamentobradesco.com.br/gerenciadorapi/login.jsp) |
+| **Convênio**                | Convênio de comércio eletrônico        | 6 Dígitos | z                                                                                                       |
+| **Nosso Numero**            | Contador incremental                   | 5 Dígitos | Inserir "10000" -  A cada emissão de boleto esse numero aumenta em +1                                   |
+| **Vencimento**              | Prazo de validade do boleto            | 6 Dígitos | é o valor padrão, se nenhum outro valor for enviado via API                                             |
+| **Assinatura de Afiliação** | Chave de segurança do **Bradesco**     | 6 Dígitos | Informado dentro [Painel do Bradesco](https://meiosdepagamentobradesco.com.br/gerenciadorapi/login.jsp) |                                                                                                       
 
 
 
