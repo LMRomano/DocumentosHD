@@ -157,7 +157,7 @@ Suporte:
 
 
 
-![](http://sizzling-oryx.cloudvent.net/images/Boletos/Bradesco.jpg)
+![](http://sizzling-oryx.cloudvent.net/images/Boletos/BancoDoBrasil.jpg)
 
 
 ### Como funciona - Fluxo Transacional Banco do Brasil?
