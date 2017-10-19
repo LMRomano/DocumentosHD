@@ -110,42 +110,35 @@ Com esses dados, acesse o Admin e siga os passos abaixo:
 
 Dados e formatos a serem inseridos:
 
-| Dados                       | Descrição                              | Formato   | OBS                                                                                                     |
-|-----------------------------|----------------------------------------|-----------|---------------------------------------------------------------------------------------------------------|
-| **Agência**                 | Código agência                         | 4 Dígitos | com  ou sem Hifen                                                                                       |
-| **Conta:**                  | Conta corrente                         | 7 Dígitos | com Hifen                                                                                               |
-| **Carteira:**               | **Não é necessário boleto Registrado** | 2 dígitos | z                                                                                                       |
-| **Conciliação**             | Número do convênio de cobrança         | 7 Dígitos | Informado dentro [Painel do Bradesco](https://meiosdepagamentobradesco.com.br/gerenciadorapi/login.jsp) |
-| **Convênio**                | Convênio de comércio eletrônico        | 6 Dígitos | z                                                                                                       |
-| **Nosso Numero**            | Contador incremental                   | 5 Dígitos | Inserir "10000" -  A cada emissão de boleto esse numero aumenta em +1                                   |
-| **Vencimento**              | Prazo de validade do boleto            | 6 Dígitos | é o valor padrão, se nenhum outro valor for enviado via API                                             |
-| **Assinatura de Afiliação** | Chave de segurança do **Bradesco**     | 6 Dígitos | Informado dentro [Painel do Bradesco](https://meiosdepagamentobradesco.com.br/gerenciadorapi/login.jsp) |                                                                                                       
+| Dados                       | Descrição                              | Formato    | OBS                                                                                                     |
+|-----------------------------|----------------------------------------|------------|---------------------------------------------------------------------------------------------------------|
+| **Agência**                 | Código agência                         | 4 Dígitos  | com  ou sem Hifen                                                                                       |
+| **Conta:**                  | Conta corrente                         | 7 Dígitos  | com Hifen                                                                                               |
+| **Carteira:**               | **Não é necessário boleto Registrado** | 2 dígitos  | N/A                                                                                                     |
+| **Conciliação**             | Número do convênio de cobrança         | 7 Dígitos  | Informado dentro [Painel do Bradesco](https://meiosdepagamentobradesco.com.br/gerenciadorapi/login.jsp) |
+| **Convênio**                | Convênio de comércio eletrônico        | 6 Dígitos  | N/A                                                                                                     |
+| **Nosso Numero**            | Contador incremental                   | 5 Dígitos  | Inserir "10000" -  A cada emissão de boleto esse numero aumenta em +1                                   |
+| **Vencimento**              | Prazo de validade do boleto            | 6 Dígitos  | é o valor padrão, se nenhum outro valor for enviado via API                                             |
+| **Assinatura de Afiliação** | Chave de segurança do **Bradesco**     | 50 Dígitos | Informado dentro [Painel do Bradesco](https://meiosdepagamentobradesco.com.br/gerenciadorapi/login.jsp) |                                                                                                       
+
+5 - Basta salvar as alterações. Pronto, o boleto está cadastrado na loja.
 
 
 
+### Como funciona a Conciliação Automática (Atualização de Status)?
 
+Para o meio de pagamento Boleto Registrado Bradesco  a conciliação é feita via sondagem em lote. 
 
+A Sondagem em lote funciona da seguinte forma: diariamente a Braspag consulta o sistema do Bradesco em busca de boletos pagos na data anterior. Essa sondagem ocorre pela manhã **(às 4h, 6h, 8h, 10h e 12h)**.
+Para receber as notificações de pagamento, a loja deve ter cadastrada a URL de Notificação em conjunto com a realização de GETs
 
-
-### Como funciona a Conciliação Automática?
-
-Para o meio de pagamento Boleto Registrado Bradesco (585) a conciliação é feita via sondagem em lote. A Sondagem em lote funciona da seguinte forma: diariamente a Braspag consulta o sistema do Bradesco em busca de boletos pagos na data anterior. Essa sondagem ocorre pela manhã (às 4h, 6h, 8h, 10h e 12h). Houve um ganho de performance de mais de 11.000%, no cenário de 1 dia de produção. Reduzimos o tempo de conciliação para apenas 5 minutos (tempo este que antes poderia levar até 10 horas).
-A conciliação dos Boletos Bradesco (SPS) (568) é feita via serviço de consulta da Braspag ao sistema do Bradesco (processo que consulta pedido por pedido, um a um). 
-Para receber as notificações de pagamento, a loja deve ter cadastrada a URL de Notificação e, eventualmente, utilizar nosso serviço de consulta. 
-
-**OBS:** Hoje, a sonda considera transações que estejam com a data de vencimento dentro do intervalo de 30 dias anteriores e 30 dias posteriores à data atual. Este intervalo existe devido ao alto volume de boletos gerados, para que haja limitação do processo de sondagem.
-
+**OBS:** Hoje, a sonda considera transações que estejam com a data de vencimento dentro do intervalo de 30 dias anteriores e 30 dias posteriores à data de Sondagem Este intervalo existe devido ao alto volume de boletos gerados, para que haja limitação do processo de sondagem.
 
 
 ### Conciliação Manual de Boletos
 
-Para conciliar o boleto de forma manual, basta localizar o pedido no Painel Administrativo e dentro dos Detalhes da Transação localizar o botão “Conciliar”. Desta forma o pedido terá o status alterado de “Não Pago" para “Pago”.
+Para conciliar o boleto de forma manual, basta localizar o pedido no Admin e dentro dos Detalhes da Transação localizar o botão “Conciliar”. Desta forma o pedido terá o status alterado de “Não Pago" para “Pago”.
 
-Notificação de mudança de status
-Para que a Braspag possa atualizar o status de pagamento dos boletos das lojas, o cliente precisa configurar a “URL de Notificação" de acordo com as instruções contidas no manual de integração, e disponibilizá-la via ticket.
-
-Após notificarmos a URL fornecida, o lojista deverá consultar nosso Webservice para identificar qual foi a mudança de status que ocorreu (notificação de pagamento, notificação de cancelamento do pedido, etc), procedimento também descrito no manual de integração. 
- 
 
 ### Contatos Bradesco
 
