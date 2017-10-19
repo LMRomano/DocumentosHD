@@ -169,7 +169,7 @@ Suporte:
 1. Para receber as notificações de pagamento, a loja deve ter cadastrada a URL de Notificação e eventualmente utilizar nosso serviço de consulta. 
 
 
-
+![](http://sizzling-oryx.cloudvent.net/images/Boletos/B1.png)
 
 
 
