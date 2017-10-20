@@ -110,6 +110,7 @@ Com esses dados, acesse o Admin e siga os passos abaixo:
 
 Dados e formatos a serem inseridos:
 
+
 | Dados                       | Descrição                              | Formato    | OBS                                                                                                     |
 |-----------------------------|----------------------------------------|------------|---------------------------------------------------------------------------------------------------------|
 | **Agência**                 | Código agência                         | 4 Dígitos  | com  ou sem Hifen                                                                                       |
@@ -119,7 +120,9 @@ Dados e formatos a serem inseridos:
 | **Convênio**                | Convênio de comércio eletrônico        | 6 Dígitos  | N/A                                                                                                     |
 | **Nosso Numero**            | Contador incremental                   | 5 Dígitos  | Inserir "10000" -  A cada emissão de boleto esse numero aumenta em +1                                   |
 | **Vencimento**              | Prazo de validade do boleto            | 6 Dígitos  | é o valor padrão, se nenhum outro valor for enviado via API                                             |
-| **Assinatura de Afiliação** | Chave de segurança do **Bradesco**     | 50 Dígitos | Informado dentro [Painel do Bradesco](https://meiosdepagamentobradesco.com.br/gerenciadorapi/login.jsp) |                                                                                                       
+| **Assinatura de Afiliação** | Chave de segurança do **Bradesco**     | 50 Dígitos | Informado dentro [Painel do Bradesco](https://meiosdepagamentobradesco.com.br/gerenciadorapi/login.jsp) |                                                                                        
+
+
 > No momento, é necessario solicitar a equipe de Suporte Braspag que o **Usuário** e **Senha** sejam cadastradas no boleto Bradesco. Após preencher os dados acima, entrem em contato com a Braspag fornecendo os dados de acesso a Sonda Bradesco <BR><BR><BR> **Exemplos:** <BR><br> **Usuário:** cielo@cielo.com <BR> **Senha / Chave de Segurança:** qcnmFA-Y2rGm4meWLzrEzSpdPARBsmblZSqfKLwq7DM
 
 
@@ -175,9 +178,10 @@ Suporte:
 ### Lojista - Ativando o Boleto no Banco do Brasil
 
 O lojista deverá contatar o gerente de relacionamento do Banco do Brasil para solicitar a habilitação do produto Boleto Registrado; o formulário a seguir deve ser preenchido conforme abaixo e entregue ao gerente: 
- - URL (site) retorno à loja: https://www.pagador.com.br
- - Formato arquivo Retorno: (X) CBR643
- - Meio de retorno: (X) Mainframe – para empresa com sistema próprio, que não usam o GFN.
+
+- URL (site) retorno à loja: https://www.pagador.com.br
+- Formato arquivo Retorno: (X) CBR643
+- Meio de retorno: (X) Mainframe – para empresa com sistema próprio, que não usam o GFN.
 
 
 
