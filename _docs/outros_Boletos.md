@@ -179,16 +179,9 @@ Suporte:
 
 O lojista deverá contatar o gerente de relacionamento do Banco do Brasil para solicitar a habilitação do produto Boleto Registrado; o formulário a seguir deve ser preenchido conforme abaixo e entregue ao gerente: 
 
-- URL (site) retorno à loja: https://www.pagador.com.br
-- Formato arquivo Retorno: (X) CBR643
-- Meio de retorno: (X) Mainframe – para empresa com sistema próprio, que não usam o GFN.
-
-
-[Formulario](http://sizzling-oryx.cloudvent.net/_docs/documentos/RegboletoBB.PDF)
-
-
-:cloud:
-
+- **URL (site) retorno à loja**: https://www.pagador.com.br
+- **Formato arquivo Retorno**: (X) CBR643
+- **Meio de retorno**: {X) Mainframe – para empresa com sistema próprio, que não usam o GFN.
 
 
 
