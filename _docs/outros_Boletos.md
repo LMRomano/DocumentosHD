@@ -264,8 +264,8 @@ Dados e formatos a serem inseridos:
 | **Agência**                 | Código agência                         | 4 Dígitos  | Hifen Obrigátório                                                                                       |
 | **Conta:**                  | Conta corrente                         | 7 Dígitos  | Hifen Obrigátório                                                                                       |
 | **Carteira:**               | **Não é necessário boleto Registrado** | 2 dígitos  | N/A                                                                                                     |
-| **Conciliação**             | Número do convênio de cobrança         | 7 Dígitos  | inseriro *Convênio de cobrança* fornecido pelo banco                                                    |
-| **Convênio**                | Convênio de comércio eletrônico        | 7 Dígitos  | inseriro *Convênio de Comercio Eletrônico* fornecido pelo banco                                         |
+| **Conciliação**             | Número do convênio de cobrança         | 7 Dígitos  | inserir o *Convênio de cobrança* fornecido pelo banco                                                    |
+| **Convênio**                | Convênio de comércio eletrônico        | 7 Dígitos  | inserir o *Convênio de Comercio Eletrônico* fornecido pelo banco                                         |
 | **Nosso Numero**            | Contador incremental                   | 5 Dígitos  | Inserir "10000" -  A cada emissão de boleto esse numero aumenta em +1                                   |
 | **Vencimento**              | Prazo de validade do boleto            | 6 Dígitos  | é o valor padrão, se nenhum outro valor for enviado via API                                             |
 | **Instruções**              | Informações exibidas no boleto         | 50 Dígitos | Somente numeros e letras de A-Z                                                                         |                                                                                        
@@ -294,10 +294,10 @@ Para certificar-se de que foi realizada a abertura de relacionamento, encaminhar
 
 |Exemplo de e-mail|
 |-|
-|“Prezados,<br> Por gentileza, verificar se a empresa abaixo possui relacionamento para tráfego de arquivos de retorno do banco [Nome do Banco]. <br>- Nome Fantasia:<br>- Razão Social:<br>- CNPJ:<br>- Agência:<br>- Conta:<br>- Convenio/Cedente:<br><br>Em caso positivo, informar o Código de Conciliação, Nomenclatura de Retorno, tipo de serviço e layout dos arquivos de retorno <br><br> Atenciosamente,”
+|“Prezados,<br><br> Por gentileza, verificar se a empresa abaixo possui relacionamento para tráfego de arquivos de retorno do banco [**Nome do Banco**]. <br>- Nome Fantasia:<br>- Razão Social:<br>- CNPJ:<br>- Agência:<br>- Conta:<br>- Convenio/Cedente:<br><br>Em caso positivo, informar o Código de Conciliação, Nomenclatura de Retorno, tipo de serviço e layout dos arquivos de retorno <br><br> Atenciosamente,”
 
 
-
+> Cada lojista deverá realizar uma troca de arquivos de conciliação com a Cielo/Braspag para ter uma sistema de atualização de status funcional na API Cielo ecommerce. <BR> O Fluxo de cadastro e troca de arquivos ainda será definido. Hoje os lojistas precisarão realizar conciliação manual
 
 
 
