@@ -177,14 +177,18 @@ Suporte:
 
 ### Lojista - Ativando o Boleto no Banco do Brasil
 
-- O lojista deverá contatar o gerente de relacionamento do Banco do Brasil para solicitar a habilitação do produto Boleto Registrado; o formulário a seguir deve ser preenchido conforme abaixo e entregue ao gerente: 
+- O lojista deverá contatar o gerente de relacionamento do Banco do Brasil para solicitar a habilitação do produto Boleto Registrado; o formulário a seguir deve ser preenchido conforme abaixo e entregue ao gerente. <br>
     - **URL (site) retorno à loja**: https://www.pagador.com.br
     - **Formato arquivo Retorno**: (X) CBR643
-    - **Meio de retorno**: {X) Mainframe – para empresa com sistema próprio, que não usam o GFN.
+    - **Meio de retorno**: {X) Mainframe – para empresa com sistema próprio, que não usam o GFN. <br>
+
+![](http://sizzling-oryx.cloudvent.net/images/Boletos/Regbb00.PNG)
+![](http://sizzling-oryx.cloudvent.net/images/Boletos/Regbb01.PNG)
 
 
+- Ao final do credenciamento, o lojista receberá um documento com como o que segue abaixo
 
-
+![](http://sizzling-oryx.cloudvent.net/images/Boletos/Regbb02.jpg)
 
 
 
