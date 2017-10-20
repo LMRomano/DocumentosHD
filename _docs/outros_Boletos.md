@@ -186,7 +186,7 @@ O lojista deverá contatar o gerente de relacionamento do Banco do Brasil para s
 
 
 
-
+:cloud:
 
 
 
