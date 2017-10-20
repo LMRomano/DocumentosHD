@@ -184,10 +184,10 @@ O lojista deverá contatar o gerente de relacionamento do Banco do Brasil para s
 - Meio de retorno: (X) Mainframe – para empresa com sistema próprio, que não usam o GFN.
 
 
+[Formulario](http://sizzling-oryx.cloudvent.net/_docs/documentos/RegboletoBB.PDF)
 
 
 :cloud:
-
 
 
 
