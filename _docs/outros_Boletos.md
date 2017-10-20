@@ -191,4 +191,127 @@ Suporte:
 ![](http://sizzling-oryx.cloudvent.net/images/Boletos/Regbb02.jpg)
 
 
+- As informações que o lojista deve passar, via ticket na ferramenta de suporte da Braspag, são:
+    - Convênio do Comércio Eletrônico
+    - Número do Convênio de Cobrança
+    - Agência
+    - Conta
+
+
+
+- Após habilitar o meio de pagamento no cadastro da loja, gerar um pedido teste enviando as informações obrigatórias para registro (nome do comprador, CPF e endereço completo).
+
+*OBS*: A loja deverá obrigatóriamente enviar no contrato da API os dados: Nome do Comprador, CPF e Endereço.
+
+### Particularidades Boleto Registrado Banco do Brasil
+
+No Boleto Registrado Banco do Brasil, a linha digitável não será retornado no response da requisição. 
+
+Esta informação ficará disponível após conciliação.
+
+Para todos os campos texto, inclusive o campo de instruções e relacionados ao endereço, são aceitos como caracteres válidos: 
+
+- as letras de A a Z (MAIÚSCULAS);
+- caracteres especiais de conjunção: hífen (-), apóstrofo (') quando utilizados, *não pode conter espaços entre as letras*;
+   - *Exemplos corretos:* D'EL-REI, D'ALCORTIVO, SANT'ANA
+   - *Exemplos incorretos:* D'EL - REI
+- até um espaço em branco entre palavras
+
+
+
+
+
+
+
+
+
+
+### HD Cielo - Ativando o Boleto no Admin
+
+O Lojista precisará informar ao HD os sequintes dados:
+
+* **Agência:** código agência com traço ou sem Hifen.
+* **Conta:** Conta corrente com traço.
+* **Carteira:** Não é necessário para este boleto
+* **Conciliação**: Número do convênio de cobrança
+* **Convênio** Convênio de comércio eletrônico
+
+
+Com esses dados, acesse o Admin e siga os passos abaixo:
+
+1 - Acesse o  Admin Braspag e selecione a opção “**Pesquisar Estabelecimento**”, existente dentro da aba “Admin” do menu superior:
+
+![](http://sizzling-oryx.cloudvent.net/images/Boletos/AB1.png)
+
+2 - Utilize os filtros para localizar a loja:
+
+![](http://sizzling-oryx.cloudvent.net/images/Boletos/AB2.PNG)
+
+3 - Dentro do cadastro da loja, vá até a sessão “**Meios de pagamento**” e clique no botão “**Editar**” ao lado do Boleto: 
+
+![](http://sizzling-oryx.cloudvent.net/images/Boletos/AB3.png)
+
+4 - Digite os dados exibidos na tela de cadastros
+
+![](http://sizzling-oryx.cloudvent.net/images/Boletos/BB.PNG)
+
+
+Dados e formatos a serem inseridos:
+
+
+| Dados                       | Descrição                              | Formato    | OBS                                                                                                     |
+|-----------------------------|----------------------------------------|------------|---------------------------------------------------------------------------------------------------------|
+| **Agência**                 | Código agência                         | 4 Dígitos  | Hifen Obrigátório                                                                                       |
+| **Conta:**                  | Conta corrente                         | 7 Dígitos  | Hifen Obrigátório                                                                                       |
+| **Carteira:**               | **Não é necessário boleto Registrado** | 2 dígitos  | N/A                                                                                                     |
+| **Conciliação**             | Número do convênio de cobrança         | 7 Dígitos  | inseriro *Convênio de cobrança* fornecido pelo banco                                                    |
+| **Convênio**                | Convênio de comércio eletrônico        | 7 Dígitos  | inseriro *Convênio de Comercio Eletrônico* fornecido pelo banco                                         |
+| **Nosso Numero**            | Contador incremental                   | 5 Dígitos  | Inserir "10000" -  A cada emissão de boleto esse numero aumenta em +1                                   |
+| **Vencimento**              | Prazo de validade do boleto            | 6 Dígitos  | é o valor padrão, se nenhum outro valor for enviado via API                                             |
+| **Instruções**              | Informações exibidas no boleto         | 50 Dígitos | Somente numeros e letras de A-Z                                                                         |                                                                                        
+
+
+
+5 - Basta salvar as alterações. Pronto, o boleto está cadastrado na loja.
+
+
+
+### Como funciona a Conciliação Automática (Atualização de Status)?
+
+
+> **NO MOMENTO, O BOLETO REGISTRADO BANCO DO BRASIL NÃO REALIZA ATUALIZAÇÃO DE STATUS AUTOMÁTICA**
+
+As instruções abaixo são para a criação e definição de troca de arquivos para conciliação bancaria entre BB e Braspag. ** O fluxo abaixo ainda não foi implementado para API Cielo**
+
+O lojista pode optar por utilizar a Conciliação Automática de Boletos. Para que seja estabelecido o relacionamento entre o Banco e a VAN Nexxera, o lojista deve preencher a carta de abertura de relacionamento bancário (carta disponível na última página deste documento). Esta deve ser devidamente preenchida pelo cliente e entregue ao gerente de relacionamento responsável pela conta corrente onde o valor dos boletos será creditado.
+
+O gerente deverá encaminhar esta carta ao setor de conectividade de seu banco. Este setor também é conhecido com setor de EDI ou setor de troca de arquivos eletrônicos do banco, e é responsável por abrir um relacionamento para tráfego dos arquivos de retorno entre banco e Nexxera.
+
+
+Verificação de Abertura de Relacionamento
+
+Para certificar-se de que foi realizada a abertura de relacionamento, encaminhar um e-mail para implantacao@nexxera.com
+
+|Exemplo de e-mail|
+|-|
+|“Prezados,<br> Por gentileza, verificar se a empresa abaixo possui relacionamento para tráfego de arquivos de retorno do banco [Nome do Banco]. <br>- Nome Fantasia:<br>- Razão Social:<br>- CNPJ:<br>- Agência:<br>- Conta:<br>- Convenio/Cedente:<br><br>Em caso positivo, informar o Código de Conciliação, Nomenclatura de Retorno, tipo de serviço e layout dos arquivos de retorno <br><br> Atenciosamente,”
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
