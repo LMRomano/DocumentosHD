@@ -181,7 +181,8 @@ O lojista deverá contatar o gerente de relacionamento do Banco do Brasil para s
 
 
 
-
+- [x] This is a complete item
+- [] This is a complete item
 
 
 
