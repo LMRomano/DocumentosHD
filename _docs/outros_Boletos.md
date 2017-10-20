@@ -86,7 +86,7 @@ Além desses dados, é necessario as credenciais do Bradesco:
 * **Usuário**: E-mail usado no acesso do [Painel do Bradesco](https://meiosdepagamentobradesco.com.br/gerenciadorapi/login.jsp)
 * **Senha**: Chave de segurança criada dentro do [Painel do Bradesco](https://meiosdepagamentobradesco.com.br/gerenciadorapi/login.jsp). **Não é a senha de acesso ao Painel Bradesco**
 
-> Essas credenciais são usadas para que a 3.0 possa consultar o status do Boleto. <BR><BR> **Exemplos:** <BR><br> **Usuário:** cielo@cielo.com <BR> **Senha / Chave de Segurança:** qcnmFA-Y2rGm4meWLzrEzSpdPARBsmblZSqfKLwq7DM
+> Essas credenciais são usadas para que a 3.0 possa consultar o status do Boleto. <BR><BR> **Exemplos:**  - Usuário: cielo@cielo.com - Senha / Chave de Segurança: qcnmFA-Y2rGm4meWLzrEzSpdPARBsmblZSqfKLwq7DM
 
 
 Com esses dados, acesse o Admin e siga os passos abaixo:
@@ -181,15 +181,7 @@ O lojista deverá contatar o gerente de relacionamento do Banco do Brasil para s
 
 
 
-- [x] This is a complete item
-- [] This is a complete item
 
-
-
-- Dashes work just as well
-- And if you have sub points, put two spaces before the dash or star:
-  - Like this
-  - And this
 
 
 
