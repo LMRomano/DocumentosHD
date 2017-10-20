@@ -186,7 +186,10 @@ O lojista deverá contatar o gerente de relacionamento do Banco do Brasil para s
 
 
 
-
+- Dashes work just as well
+- And if you have sub points, put two spaces before the dash or star:
+  - Like this
+  - And this
 
 
 
