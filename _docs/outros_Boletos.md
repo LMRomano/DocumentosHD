@@ -268,7 +268,7 @@ Dados e formatos a serem inseridos:
 | **Convênio**                | Convênio de comércio eletrônico        | 7 Dígitos  | inserir o *Convênio de Comercio Eletrônico* fornecido pelo banco                                         |
 | **Nosso Numero**            | Contador incremental                   | 5 Dígitos  | Inserir "10000" -  A cada emissão de boleto esse numero aumenta em +1                                   |
 | **Vencimento**              | Prazo de validade do boleto            | 6 Dígitos  | é o valor padrão, se nenhum outro valor for enviado via API                                             |
-| **Instruções**              | Informações exibidas no boleto         | 50 Dígitos | Somente numeros e letras de A-Z                                                                         |                                                                                        
+| **Instruções**              | Informações exibidas no boleto         | 50 Dígitos | Somente numeros e letras de A-Z, não pode haver caractéres especiais ou mais de um espaçamento entre cada palavara                                                                         |                                                                                        
 
 
 
