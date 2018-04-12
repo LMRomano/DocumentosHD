@@ -109,19 +109,20 @@ Com esses dados, acesse o Admin e siga os passos abaixo:
 
 Dados e formatos a serem inseridos:
 
--
-
-| Dados                       | Descrição                              | Formato    | OBS                                                                                                     |
-|-----------------------------|----------------------------------------|------------|---------------------------------------------------------------------------------------------------------|
-| **Agência**                 | Código agência                         | 4 Dígitos  | com  ou sem Hifen                                                                                       |
-| **Conta:**                  | Conta corrente                         | 7 Dígitos  | com Hifen                                                                                               |
-| **Carteira:**               | **Não é necessário boleto Registrado** | 2 dígitos  | N/A                                                                                                     |
-| **Conciliação**             | Número do convênio de cobrança         | 7 Dígitos  | Informado dentro [Painel do Bradesco](https://meiosdepagamentobradesco.com.br/gerenciadorapi/login.jsp) - Valida com o banco se é necessario Preenchimento |
-| **Convênio**                | Convênio de comércio eletrônico        | 6 Dígitos  | Valida com o banco se é necessario Preenchimento para a carteira                                        |
-| **Nosso Numero**            | Contador incremental                   | 5 Dígitos  | Inserir "10000" -  A cada emissão de boleto esse numero aumenta em +1                                   |
-| **Vencimento**              | Prazo de validade do boleto            | 6 Dígitos  | é o valor padrão, se nenhum outro valor for enviado via API                                             |
-| **Assinatura de Afiliação** | Chave de segurança do **Bradesco**     | 50 Dígitos | Informado dentro [Painel do Bradesco](https://meiosdepagamentobradesco.com.br/gerenciadorapi/login.jsp) |                                                                                        
 > No momento, é necessario solicitar a equipe de Suporte Braspag que o **Usuário** e **Senha** sejam cadastradas no boleto Bradesco. Após preencher os dados acima, entrem em contato com a Braspag fornecendo os dados de acesso a Sonda Bradesco <BR><BR><BR> **Exemplos:** <BR><br> **Usuário:** cielo@cielo.com <BR> **Senha / Chave de Segurança:** qcnmFA-Y2rGm4meWLzrEzSpdPARBsmblZSqfKLwq7DM
+
+| Dados                       | Descrição                              | Formato    | OBS                                                                                                                                                        |
+|-----------------------------|----------------------------------------|------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Agência**                 | Código agência                         | 4 Dígitos  | com  ou sem Hifen                                                                                                                                          |
+| **Conta:**                  | Conta corrente                         | 7 Dígitos  | com Hifen                                                                                                                                                  |
+| **Carteira:**               | **Não é necessário boleto Registrado** | 2 dígitos  | N/A                                                                                                                                                        |
+| **Conciliação**             | Número do convênio de cobrança         | 7 Dígitos  | Informado dentro [Painel do Bradesco](https://meiosdepagamentobradesco.com.br/gerenciadorapi/login.jsp) - Valida com o banco se é necessario Preenchimento |
+| **Convênio**                | Convênio de comércio eletrônico        | 6 Dígitos  | Valida com o banco se é necessario Preenchimento para a carteira                                                                                           |
+| **Nosso Numero**            | Contador incremental                   | 5 Dígitos  | Inserir "10000" -  A cada emissão de boleto esse numero aumenta em +1                                                                                      |
+| **Vencimento**              | Prazo de validade do boleto            | 6 Dígitos  | é o valor padrão, se nenhum outro valor for enviado via API                                                                                                |
+| **Assinatura de Afiliação** | Chave de segurança do **Bradesco**     | 50 Dígitos | Informado dentro [Painel do Bradesco](https://meiosdepagamentobradesco.com.br/gerenciadorapi/login.jsp)                                                    |
+
+
 
 
 5 - Basta salvar as alterações. Pronto, o boleto está cadastrado na loja.
