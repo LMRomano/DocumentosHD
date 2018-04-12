@@ -107,9 +107,9 @@ Com esses dados, acesse o Admin e siga os passos abaixo:
 
 ![](http://sizzling-oryx.cloudvent.net/images/Boletos/BR.PNG)
 
-
 Dados e formatos a serem inseridos:
 
+-
 
 | Dados                       | Descrição                              | Formato    | OBS                                                                                                     |
 |-----------------------------|----------------------------------------|------------|---------------------------------------------------------------------------------------------------------|
@@ -122,7 +122,7 @@ Dados e formatos a serem inseridos:
 | **Vencimento**              | Prazo de validade do boleto            | 6 Dígitos  | é o valor padrão, se nenhum outro valor for enviado via API                                             |
 | **Assinatura de Afiliação** | Chave de segurança do **Bradesco**     | 50 Dígitos | Informado dentro [Painel do Bradesco](https://meiosdepagamentobradesco.com.br/gerenciadorapi/login.jsp) |                                                                                        
 
-
+-
 > No momento, é necessario solicitar a equipe de Suporte Braspag que o **Usuário** e **Senha** sejam cadastradas no boleto Bradesco. Após preencher os dados acima, entrem em contato com a Braspag fornecendo os dados de acesso a Sonda Bradesco <BR><BR><BR> **Exemplos:** <BR><br> **Usuário:** cielo@cielo.com <BR> **Senha / Chave de Segurança:** qcnmFA-Y2rGm4meWLzrEzSpdPARBsmblZSqfKLwq7DM
 
 
