@@ -40,7 +40,7 @@ Para habilitar o Velocity basta:
 
 1 - Acessar os dados de **Cadastro de Lojistas 3.0/Api Cielo Ecommerce**&nbsp;indo at&eacute; “**Demais funcionalidades”**
 
-![](http://sizzling-oryx.cloudvent.net/images/Velocity/V0.JPG)
+![](/images/Velocity/V0.JPG)
 
 2 - Dentro de **Demais funcionalidades** Marcar o op&ccedil;&atilde;o velocity
 
