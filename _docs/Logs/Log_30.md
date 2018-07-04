@@ -6,9 +6,7 @@ order: 1
 
 ## O que é o LOG da API?
 
-
 Logs são registros dos processos que ocorrem dentro da API Cielo. Eles marcam fluxos corretos e incorretos.
-
 
 Logs possuem 2 níveis de informação:
 
@@ -20,9 +18,6 @@ Logs possuem 2 níveis de informação:
 * **Informação** – Mostra os dados trafegados na API - 99% do atendimento ocorre neste nível)
 * **Error** – Mostra falhas dentro da API 
 * **Critical** – Mostra falhas severas de fluxo
-
-
-
 
 ## Regras ara pesquisa em Log
 
@@ -41,9 +36,6 @@ As melhores variaveis para se pesquisar no Log são (Em ordem de Eficiência)
 2. MID
 3. Usar Palavra Chave
 
-
-
-
 **Atenção A:** O **RequestID** é o identificador de uma ação dentro da Braspag. Ele se repete em todos os passos dessa ação. Um exemplo é a AUTORIZAÇÃO onde o RequestID que é gerado na requisição do Cliente, é o mesmo identificando o envio do pedido a Cielo, o mesmo que identifica a resposta Cielo e o mesmo que identifica a resposta ao Cliente.
 
 **Atenção B:** Todo LOG possui um **RequestID**. Encontrar o RequestID varia de acordo com a ação executada:
@@ -54,12 +46,6 @@ As melhores variaveis para se pesquisar no Log são (Em ordem de Eficiência)
 | **Consulta**             | A consulta não é apresentada em  `Detalhes de transação`. Aqui basta pesquisar o `MID + PalavraChave = PaymentID` em Log. Será possivel achar o Log da consulta + RequestID |
 | **Captura/Cancelamento** | Essa opção fica disponivel em `Detalhes de transação` se bem sucedida. Em Caso de erro, deve ser feita a pesquisa de `MID + PalavraChave = PaymentID`                       |
 | **Erros**                | Em Caso de erro, deve ser feita a pesquisa de `MID + PalavraChave = PaymentID/utro dado fornecido`                                                                          |
-
-
-
-
-
-
 
 ## Como Pesquisar no LOG API CIELO ECOMMERCE
 
